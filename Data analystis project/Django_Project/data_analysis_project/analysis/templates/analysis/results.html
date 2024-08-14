@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Analysis Results</h1>
+
+<h2 class="mt-4">Summary Statistics</h2>
+<div class="table-responsive">{{ summary_stats|safe }}</div>
+
+<h2 class="mt-4">First Few Rows</h2>
+<div class="table-responsive">{{ first_rows|safe }}</div>
+
+<h2 class="mt-4">Missing Values</h2>
+<div class="table-responsive">{{ missing_values|safe }}</div>
+
+<h2 class="mt-4">Histogram</h2>
+<img src="/{{ histogram }}" alt="Histogram" class="img-fluid" />
+{% endblock %}
